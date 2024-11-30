@@ -5,7 +5,7 @@ install_iptables_persistent() {
     if ! dpkg -l | grep -qw iptables-persistent; then
         echo "正在安装iptables-persistent..."
         apt-get update
-        apt-get install -y iptables-persistent
+        apt-get install -y iptables-persistent sudo
     else
         echo "iptables-persistent已安装。"
     fi
